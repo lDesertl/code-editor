@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./Styles/Global.scss";
+import "./Styles/global.scss";
 import CodeEditor from "./Components/Code-editor";
 function App() {
   return (

@@ -1,0 +1,22 @@
+button {
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  margin: 10px;
+  transition: 0.12s;
+  width: 100%;
+}
+.button-active {
+  font-size: 10px;
+  width: 65%;
+}
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+}

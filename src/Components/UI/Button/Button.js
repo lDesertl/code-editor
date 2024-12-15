@@ -20,8 +20,8 @@ const Button = ({ type, color, text, onClick }) => {
     type === "run"
       ? "button-run"
       : type === "del"
-      ? "button-del"
-      : "button-other"
+        ? "button-del"
+        : "button-other"
   }`;
 
   let buttonStyle = {};

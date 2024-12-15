@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./Styles/global.scss";
+import "./Styles/Global.scss";
 import CodeEditor from "./Components/Code-editor";
 function App() {
   return (

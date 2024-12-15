@@ -9,8 +9,7 @@ import {
   pythonDataTypes,
   pythonExceptions,
   pythonClasses,
-} from "../Utils/pythonAutocompleteData";
-import * as monaco from "monaco-editor";
+} from "../Const/pythonHighlightWords";
 
 const CodeEditor = () => {
   const [language, setLanguage] = useState("python");
@@ -74,7 +73,7 @@ const CodeEditor = () => {
     if (!pyodideInstance) return;
 
     try {
-      const result = await pyodideInstance.runPythonAsync(`
+      await pyodideInstance.runPythonAsync(`
         import sys
         from io import StringIO
         old_stdout = sys.stdout
@@ -103,7 +102,6 @@ const CodeEditor = () => {
     iframe.style.display = "none";
     document.body.appendChild(iframe);
 
-    const originalConsoleLog = iframe.contentWindow.console.log;
     iframe.contentWindow.console.log = (message) => {
       setOutput((prevOutput) => prevOutput + message + "\n");
     };
